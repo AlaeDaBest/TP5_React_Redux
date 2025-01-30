@@ -1,0 +1,72 @@
+.ContainerGlobal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial;
+}
+.Container .Task{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #961af6;
+  border-left: 10px solid #961af6;
+  background-color: #f9f6fb;
+  border-radius: 20px;
+  padding: 1% 5%;
+  margin: 1% 0;
+}
+.Container .Task .checkbox-article{
+  display: flex;
+  align-items: center;
+}
+.Container .Task .checkbox-article input{
+  appearance: none; 
+  width: 20px;
+  height: 20px;
+  border: 2px solid #961af6;
+  border-radius: 50%; /* Optional: rounded corners */
+  background-color: rgba(255, 255, 255, 0.364);
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.Container .Task .checkbox-article input[type="checkbox"]:hover {
+  border-color: #961af6;; /* Change border color on hover */
+}
+
+.Container .Task .checkbox-article input[type="checkbox"]:checked {
+  background-color: #961af6;; /* Change background color when checked */
+  border-color: #961af6; /* Optional: Change border color too */
+  content: '✔'; /* Optional: Add a checkmark effect */
+  color: white;
+  
+}
+
+.Container .Task .checkbox-article input[type="checkbox"]:checked::before {
+  margin-top: -10%;
+  content: "✔";
+  font-size: 15px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Container .Task .Icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Container .Task .Icons .Trash , .Edit{
+  color: #961af6;
+  font-size: 20px;
+  transition: all 0.2s ease-in-out;
+}
+.Container .Task .Icons .Trash:hover , .Edit:hover{
+  color: black;
+  transform: scale(1.05);
+}
+.checkbox-article input:checked + p{
+  text-decoration: line-through;
+}
+.Task .checkbox-article input:checked{
+  border: gray solid 1px;
+  background-color: black;
+}
